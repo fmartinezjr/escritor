@@ -5,7 +5,8 @@
     "@google-cloud/speech": "^6.7.0"
   },
   "scripts": {
-    "check": "prettier . --check **.ts"
+    "check": "prettier . --check .",
+    "fix": "prettier . --write ."
   },
   "devDependencies": {
     "@types/node": "^22.7.4",
