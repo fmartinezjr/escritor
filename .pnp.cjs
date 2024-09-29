@@ -28,7 +28,8 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@google-cloud/speech", "npm:6.7.0"],\
-          ["@types/node", "npm:22.7.4"]\
+          ["@types/node", "npm:22.7.4"],\
+          ["prettier", "npm:3.3.3"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -511,7 +512,8 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["escritor", "workspace:."],\
           ["@google-cloud/speech", "npm:6.7.0"],\
-          ["@types/node", "npm:22.7.4"]\
+          ["@types/node", "npm:22.7.4"],\
+          ["prettier", "npm:3.3.3"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -812,6 +814,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["once", "npm:1.4.0"],\
           ["wrappy", "npm:1.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["prettier", [\
+      ["npm:3.3.3", {\
+        "packageLocation": "./.yarn/unplugged/prettier-npm-3.3.3-e811f023f3/node_modules/prettier/",\
+        "packageDependencies": [\
+          ["prettier", "npm:3.3.3"]\
         ],\
         "linkType": "HARD"\
       }]\
