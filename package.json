@@ -3,5 +3,8 @@
   "packageManager": "yarn@4.3.0",
   "dependencies": {
     "@google-cloud/speech": "^6.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4"
   }
 }
