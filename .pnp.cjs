@@ -27,7 +27,8 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@google-cloud/speech", "npm:6.7.0"]\
+          ["@google-cloud/speech", "npm:6.7.0"],\
+          ["@types/node", "npm:22.7.4"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -509,7 +510,8 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["escritor", "workspace:."],\
-          ["@google-cloud/speech", "npm:6.7.0"]\
+          ["@google-cloud/speech", "npm:6.7.0"],\
+          ["@types/node", "npm:22.7.4"]\
         ],\
         "linkType": "SOFT"\
       }]\
