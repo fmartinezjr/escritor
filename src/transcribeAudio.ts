@@ -1,6 +1,9 @@
 import fs from "fs";
 import { speechClient } from "./client";
 import { google } from "@google-cloud/speech/build/protos/protos";
+import dotenv  from 'dotenv';
+
+dotenv.config();
 
 export async function transcribeAudio(mp3FilePath: string) {
   const audioBuffer = fs.readFileSync(mp3FilePath);
@@ -12,7 +15,7 @@ export async function transcribeAudio(mp3FilePath: string) {
       content: audioBytes,
     },
     config: {
-      encoding: "MP3",
+      encoding: "LINEAR16",
       sampleRateHertz: 16000,
       languageCode: "en-US",
     },
