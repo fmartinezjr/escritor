@@ -1,10 +1,11 @@
-import  ffmpeg  from 'fluent-ffmpeg'
-import  path  from 'path';
+import ffmpeg from 'fluent-ffmpeg';
+import ffmpegStatic from 'ffmpeg-static';
+import path from 'path';
 import dotenv  from 'dotenv';
-import { error } from 'console';
-
 
 dotenv.config();
+
+ffmpeg.setFfmpegPath(ffmpegStatic!);
 
 if(!process.env.INPUT){
     throw new Error('Missing Input');
@@ -18,6 +19,9 @@ function convertMp3ToWav(inputPath: string, outputPath: string) {
   return new Promise((resolve, reject) => {
     ffmpeg(inputPath)
       .toFormat('wav')
+      .on('progress', (progress) => {
+        console.log(`Processing: ${JSON.stringify(progress)}  done`);
+      })
       .on('end', () => {
         console.log('Conversion complete');
         resolve(outputPath);
