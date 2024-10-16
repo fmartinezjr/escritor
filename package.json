@@ -4,6 +4,7 @@
   "scripts": {
     "build": "tsc",
     "convertAudio": "ts-node src/mp3toWav.ts",
+    "transcribeAudio": "ts-node src/main.ts",
     "check": "prettier . --check .",
     "fix": "prettier . --write ."
   },
