@@ -1,5 +1,11 @@
 import { transcribeAudio } from "./transcribeAudio";
-import path from "path";
+import dotenv  from 'dotenv';
 
-const mp3FilePath = path.join(process.cwd(), "output/Untitled.wav");
-transcribeAudio(mp3FilePath);
+dotenv.config();
+
+if(! process.env.GCS_URL){
+    throw new Error("ENV Missing!")
+}
+
+const gcsUri = process.env.GCS_URL
+transcribeAudio(gcsUri);
